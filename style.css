@@ -36,6 +36,18 @@
   grid-template-columns: auto auto auto auto;
 }
 
+.gridContainerContact {
+  display: grid;
+  grid-template-areas: 
+  "header header header header"
+  "Imagenes Imagenes Imagenes Imagenes"
+  "tabla tabla tabla tabla"
+  "registro registro registro registro"
+  "footer footer footer footer";
+  grid-template-rows: auto auto auto auto auto;
+  grid-template-columns: auto auto auto auto;
+}
+
 header {
   grid-area:header;
   background-color: orange;
@@ -172,7 +184,7 @@ iframe{
 
 span{
   display: block;
-  padding: 3% 0% 0% 0%;
+  padding-top: 3%;
 }
 
 td { 
@@ -196,6 +208,7 @@ table {
     min-width: 100%;
     min-height: 100%;
   }
+
   tr {
     display: flex;
     flex-direction: column;
@@ -207,7 +220,9 @@ table {
 
 .additionalExp {
   background-color: gainsboro;
-  list-style-type: circle;
+  list-style-type: none ;
+  margin: 2%;
+  width: 95%;
 }
 
 footer{
@@ -222,6 +237,7 @@ footer{
     min-height:650px; 
     padding: 25px;
   }
+
   tr {
     display: flex;
     flex-direction: column;
@@ -252,25 +268,40 @@ footer{
   height: 512px;
 }
 
+.tabla {
+  margin: 2%;
+  width: 98%;
+}
+
 .tablaContacto {
   border:2px solid;
-  padding: 2%;
   border-spacing: 2px;
   border-collapse: separate;
+  grid-area: tabla;
   margin-top: 10px;
   margin-left: auto;
-  margin-right: auto;
-  padding-top: 10px;
-  width: 95%
+  width: 95%;
+  min-width: 80%;
 }
 
 .tablaContacto tr {
   display: table;
   flex-wrap: no-wrap;
-  /* width: 95%; */
 }
 
-@media screen and (max-width: 630px) {
+.tablaContacto td {
+  min-width: 100px;
+  max-width: 150px;
+  /* width: 120px;  */
+  border: none;
+}
+
+.tablaContacto th {
+  min-width: 100px;
+  border: none;
+}
+
+@media screen and (max-width: 450px) {
   .tablaContacto tr {
     display: flex;
     flex-direction: column;
@@ -281,10 +312,12 @@ footer{
 }
 
 .register {
-  width: 95%;
+  grid-area: registro;
   margin-left: auto;
   margin-right: auto;
+  width: 95%;
 }
+
 fieldset {
   padding: 10px;
   margin: 10px 0px;
@@ -310,7 +343,6 @@ input[name="frec"] {
 .credentials {
   display: inline-block;
   padding: 10px;
-  margin: 5px;
   width: 100%;
   /* text-align: center; */
 }
@@ -333,10 +365,6 @@ label {
   padding: 10px;
   margin: 5px;
   width: 90px;
-}
-
-.bulletin {
-  margin: 5px;
 }
 
 .bulletin .frec {
