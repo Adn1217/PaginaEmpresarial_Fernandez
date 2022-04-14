@@ -25,6 +25,7 @@
 }
 
 .gridContainer {
+  background-image: linear-gradient(to top, rgb(255, 255, 83) , rgb(255, 187, 60));
   display: grid;
   grid-template-areas: 
   "header header header header"
@@ -37,6 +38,7 @@
 }
 
 .gridContainerContact {
+  background-image: linear-gradient(to top, rgb(255, 255, 83) , rgb(255, 187, 60));
   display: grid;
   grid-template-areas: 
   "header header header header"
@@ -51,6 +53,8 @@
 header {
   grid-area:header;
   background-color: orange;
+  background-color:rgb(255, 187, 60);
+  /* background-image: linear-gradient(to bottom,yellow , orange); */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -79,7 +83,7 @@ header nav ul li {
   color: white;
   display: inline-block;
   justify-content: center;
-  padding: 23px 0px;
+  padding: 24px 0px;
   text-decoration: none;
 }
 
@@ -98,12 +102,11 @@ header nav ul li {
 }
 
 header nav ul li:hover {
-  background-color: yellow;
-  text-decoration: underline;
+  /* background-color: yellow; */
+  background-color: rgb(255, 255, 83);
 }
 
 header a:hover {
-  background-color: yellow;
   text-decoration: underline;
 }
 
@@ -151,7 +154,7 @@ article {
 
 .info__resume { 
   grid-area: info__resume;
-  background-image: url(./assets/Imagenes/panel_fondo.jfif);
+  background-image: url(./assets/Imagenes/panel_fondo.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 80%;
@@ -219,7 +222,7 @@ table {
 }
 
 .additionalExp {
-  background-color: gainsboro;
+  /* background-color: gainsboro; */
   list-style-type: none ;
   margin: 2%;
   width: 95%;
