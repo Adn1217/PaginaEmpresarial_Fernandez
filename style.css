@@ -1,0 +1,368 @@
+@font-face { 
+  font-family: "Roboto Thin"; 
+  src: url("./assets/fonts/Roboto-Thin.ttf"); 
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#header__logo {
+  width: 64px;
+  height: 64px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 630px) {
+
+  #header__logo {
+    display: none;
+  }
+
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-areas: 
+  "header header header header"
+  "Imagenes Imagenes Imagenes Imagenes"
+  "info__resume info__resume info__video info__video"
+  "info__resume info__resume info__video info__video"
+  "footer footer footer footer";
+  grid-template-rows: auto auto auto auto auto;
+  grid-template-columns: auto auto auto auto;
+}
+
+header {
+  grid-area:header;
+  background-color: orange;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 30px;
+  width: 100%;
+}
+
+@media screen and (max-width: 630px) {
+
+  header {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
+
+header a {
+  color: white;
+  display: inline-block;
+  /* border-right: 1px solid white;*/
+  padding: 0px 10px;
+  text-decoration: none;
+}
+
+header nav ul li {
+  color: white;
+  display: inline-block;
+  justify-content: center;
+  padding: 23px 0px;
+  text-decoration: none;
+}
+
+.header__last {
+  padding: 24px 10px;
+}
+
+@media screen and (max-width: 630px) {
+  .header__last {
+    padding: 0px;
+  }
+}
+
+.header__nav__option--active {
+  background-color: orangered;
+}
+
+header nav ul li:hover {
+  background-color: yellow;
+  text-decoration: underline;
+}
+
+header a:hover {
+  background-color: yellow;
+  text-decoration: underline;
+}
+
+.header__navBar a {
+  text-decoration: none;
+}
+
+.Imagenes {
+  display: inline-block;
+  grid-area: Imagenes;
+  margin: 10px auto;
+  /* width: 90%;  */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+img {
+  width: 256px;
+  height: 256px;
+  padding: 5px;
+}
+
+.Referencia {
+  font-style: italic;
+}
+
+.info {
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  margin: 10px auto;
+  min-height: 100%;
+  padding: 10px;
+  width: 90%;
+}
+
+article {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 10px auto;
+}
+
+.info__resume { 
+  grid-area: info__resume;
+  background-image: url(./assets/Imagenes/panel_fondo.jfif);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  font-family: "Roboto Thin", cursive;
+  height: auto;
+  padding: 5px;
+  width: 40%;
+}
+
+.info__video {
+  grid-area: info__video;
+  display: inline-block;
+  position: relative;
+  width: 60%;
+  min-height: 400px;
+  min-width: 400px;
+  max-height: 700px;
+  max-width: 700px;
+  height: auto;
+}
+
+iframe{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  border: solid 1px red;
+}
+
+span{
+  display: block;
+  padding: 3% 0% 0% 0%;
+}
+
+td { 
+    border: 2px solid;
+    padding: 10px;
+}
+
+tr {
+  flex-wrap: no-wrap;
+  width: 100%;
+}
+
+table {
+  display: flex;
+  padding: 20px 0px;
+  width: 100%;
+}
+
+@media screen and (max-width: 428px) {
+  table img {
+    min-width: 100%;
+    min-height: 100%;
+  }
+  tr {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.additionalExp {
+  background-color: gainsboro;
+  list-style-type: circle;
+}
+
+footer{
+  grid-area: footer;
+  display:block;
+  padding: 3%;
+}
+
+@media screen and (max-width: 800px) {
+  .teamMembers img {
+    min-width: 650px;
+    min-height:650px; 
+    padding: 25px;
+  }
+  tr {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 660px){
+  .teamMembers img {
+    min-width: 512px;
+    min-height:512px; 
+    padding: 25px;
+  }
+}
+
+@media screen and (max-width: 550px){
+  .teamMembers img {
+    min-width: 256px;
+    min-height:256px; 
+    padding: 25px;
+  }
+}
+
+.projects img {
+  width: 512px;
+  height: 512px;
+}
+
+.tablaContacto {
+  border:2px solid;
+  padding: 2%;
+  border-spacing: 2px;
+  border-collapse: separate;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10px;
+  width: 95%
+}
+
+.tablaContacto tr {
+  display: table;
+  flex-wrap: no-wrap;
+  /* width: 95%; */
+}
+
+@media screen and (max-width: 630px) {
+  .tablaContacto tr {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.register {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+fieldset {
+  padding: 10px;
+  margin: 10px 0px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+input {
+  display: inline-block;
+  padding: 10px;
+  margin: 5px;
+  width: 20%;
+}
+
+input[name="frec"] {
+  width: 5%;
+}
+
+.credentials {
+  display: inline-block;
+  padding: 10px;
+  margin: 5px;
+  width: 100%;
+  /* text-align: center; */
+}
+
+.credentials input {
+  display: inline-block;
+  width: 30%;
+  align-items: flex-start;
+}
+
+#countries {
+  display: inline-block;
+  padding: 10px;
+  margin: 5px;
+  width: 15%;
+}
+
+label {
+  display: inline-block;
+  padding: 10px;
+  margin: 5px;
+  width: 90px;
+}
+
+.bulletin {
+  margin: 5px;
+}
+
+.bulletin .frec {
+  padding: 10px;
+  text-align: left;
+}
+
+.bulletin input {
+  padding: 10px;
+  text-align: left;
+}
+
+.bulletin label {
+  padding: 10px;
+  text-align: left;
+}
+
+.buttons {
+  padding: 10px;
+  margin: 10px 0px;
+}
+
+#botonLimpiar {
+  min-width: 100px;
+}
+
+#botonEnviar {
+  min-width: 100px;
+}

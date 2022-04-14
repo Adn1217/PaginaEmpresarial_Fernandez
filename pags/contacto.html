@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="./../assets/Iconos/afc_favicon_logo/afc_favicon_logo.png">
+    <link rel="stylesheet" href="./../style.css"/>
+</head>
+<body class="gridContainer">
+    <header>
+        <a title="Home" href="./../index.html"><img id="header__logo" src="./../assets/Iconos/Home.png" alt="Home Icon"></a>
+        <nav>
+            <ul class="header__navBar">
+                <li><a  title="Home" href="./../index.html">HOME</a></li>
+                <li><a title="Experience" href="./experiencia.html">EXPERIENCIA</a></li>
+                <li><a title="Team" href="./equipo.html">EQUIPO</a></li>
+                <li ><a title="Project" href="./proyectos.html">PROYECTOS</a></li>
+            </ul>
+        </nav>
+        <a class="header__nav__option--active header__last" title="Contact" href="./contacto.html">CONTACTO</a>
+    </header>
+    <section>
+        <div class="tabla">
+            <table class="tablaContacto">
+                <tr>
+                    <th>Oficina</th>
+                    <th>Municipio</th>
+                    <th>Dirección</th>
+                    <th>Teléfono</th>
+                </tr>
+                <tr>
+                    <td>Los Balsos</td>
+                    <td>Medellín</td>
+                    <td>Cra 12 Sur # 18 - 168</td>
+                    <td>3532222</td>
+                </tr>
+                <tr>
+                    <td>Ancón Sur</td>
+                    <td>Caldas</td>
+                    <td>Autopista 1era # 125 - Sector La Tablaza</td>
+                    <td>3189353</td>
+                </tr>
+                <tr>
+                    <td>Centro Ejecutivo</td>
+                    <td>Barranquilla</td>
+                    <td>Cra 74 # 54 - 17</td>
+                    <td>3251819</td>
+                </tr>
+            </table> 
+        </div>
+    </section>
+   <fieldset class="register">
+    <legend>Formulario de Registro</legend>
+    <form action="" method="get">
+        <div id="initFields">
+            <label for="nombres">Nombres:</label>
+            <input type="text" id="nombres">
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos"/>
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad"/>
+        </div>
+        <div>
+            <label for="identificacion">Identificación:</label>
+            <input type="text" id="identificacion"/>
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono"/>
+            <label for="paises">País de origen</label>
+            <select name="" id="countries">
+                <option value="Argentina">Argentina</option>
+                <option value="Brasil">Brasil</option>
+                <option value="Bolivia">Bolivia</option>
+                <option value="Chile">Chile</option>
+                <option value="Colombia">Colombia</option>
+                <option value="Ecuador">Ecuador</option>
+                <option value="Peru">Perú</option>
+                <option value="Paraguay">Paraguay</option>
+                <option value="Venezuela">Venezuela</option>
+            </select>
+        </div>
+        <fieldset class="credentials">
+            <legend>Credenciales de acceso</legend>
+                <div>
+                    <label for="correo">Correo electrónico:</label>
+                    <input type="email" id="email" placeholder="micorreo@hotmail.com">
+                </div>
+                <div>
+                    <label for="clave">Contraseña:</label>
+                    <input type="password" id="psw" placeholder="Ingrese contraseña" >
+                </div>
+        </fieldset>
+        <fieldset class="bulletin">
+            <legend>¿Desea recibir boletines informativos?</legend>
+            <div>
+                <input name="frec" type="radio" id="frec1" value="1" checked>
+                <label for="">Nunca</label>
+            </div>
+            <div>
+                <input name="frec" type="radio" id="frec2" value="2">
+                <label for="">Mensualmente</label>
+            </div>
+            <div>
+                <input name="frec" type="radio" id="frec3" value="3">
+                <label for="">Semanalmente</label>
+            </div>
+            <div>
+                <input name="frec" type="radio" id="frec4" value="4">
+                <label for="">Diariamente</label>
+            </div>
+        </fieldset>
+
+        <div class="buttons">
+                <!-- <input type="button" id="botonSinFuncion" value="No hacer nada">    -->
+                <input type="reset" id="botonLimpiar" value="Limpiar">
+                <input type="submit" id="botonEnviar" value="Registrarme">
+        </div>
+    </form>
+   </fieldset>
+</body>
+<footer>
+    <p>Autor: Adrián Fernández Cabrera</p>
+    <p><a href="mailto:adn1217@hotmail.com">adn1217@hotmail.com</a></p>
+</footer>
+</html>
