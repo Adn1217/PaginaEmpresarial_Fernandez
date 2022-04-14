@@ -25,6 +25,7 @@
 }
 
 .gridContainer {
+  background-image: linear-gradient(to top, rgb(255, 255, 83) , rgb(255, 187, 60));
   display: grid;
   grid-template-areas: 
   "header header header header"
@@ -37,6 +38,7 @@
 }
 
 .gridContainerContact {
+  background-image: linear-gradient(to top, rgb(255, 255, 83) , rgb(255, 187, 60));
   display: grid;
   grid-template-areas: 
   "header header header header"
@@ -51,6 +53,8 @@
 header {
   grid-area:header;
   background-color: orange;
+  background-color:rgb(255, 187, 60);
+  /* background-image: linear-gradient(to bottom,yellow , orange); */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -75,11 +79,16 @@ header a {
   text-decoration: none;
 }
 
+header a:hover {
+  transform: scale(1.2);
+  text-decoration: underline;
+}
+
 header nav ul li {
   color: white;
   display: inline-block;
   justify-content: center;
-  padding: 23px 0px;
+  padding: 24px 0px;
   text-decoration: none;
 }
 
@@ -98,13 +107,8 @@ header nav ul li {
 }
 
 header nav ul li:hover {
-  background-color: yellow;
-  text-decoration: underline;
-}
-
-header a:hover {
-  background-color: yellow;
-  text-decoration: underline;
+  /* background-color: yellow; */
+  background-color: rgb(255, 255, 83);
 }
 
 .header__navBar a {
@@ -125,6 +129,27 @@ img {
   width: 256px;
   height: 256px;
   padding: 5px;
+  cursor: pointer;
+}
+
+.inRow {
+  transition: transform 0.5s;
+}
+
+.inRow:hover { /* Imagenes del banner */
+  transform:  translate(100px, 100px) scale(1.5);
+}
+
+.inRow:last-child:hover { /* Mantenerla dentro de la pantalla */
+  transform:  translate(-100px, 100px) scale(1.5);
+}
+
+table img {
+  transition: transform 0.5s;
+}
+
+table img:hover {
+  transform: scale(1.3);
 }
 
 .Referencia {
@@ -151,7 +176,7 @@ article {
 
 .info__resume { 
   grid-area: info__resume;
-  background-image: url(./assets/Imagenes/panel_fondo.jfif);
+  background-image: url(./assets/Imagenes/panel_fondo.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 80%;
@@ -174,12 +199,13 @@ article {
 }
 
 iframe{
+  border: solid 1px red;
+  bottom: 0;
+  height: 100%;
   position: absolute;
   top: 0;
-  bottom: 0;
   width: 100%;
-  height: 100%;
-  border: solid 1px red;
+  z-index: -1; /* Para que no tape a la imagen cuando se expande */
 }
 
 span{
@@ -219,7 +245,7 @@ table {
 }
 
 .additionalExp {
-  background-color: gainsboro;
+  /* background-color: gainsboro; */
   list-style-type: none ;
   margin: 2%;
   width: 95%;
@@ -266,6 +292,11 @@ footer{
 .projects img {
   width: 512px;
   height: 512px;
+  transition: transform 0.5s;
+}
+
+.projects img:hover {
+  transform: translate(100px, 100px) scale(1.3);
 }
 
 .tabla {
@@ -367,24 +398,16 @@ label {
   width: 90px;
 }
 
-.bulletin .frec {
-  padding: 10px;
-  text-align: left;
-}
-
-.bulletin input {
-  padding: 10px;
-  text-align: left;
-}
-
-.bulletin label {
-  padding: 10px;
-  text-align: left;
+input[type="radio"]:checked + label{
+  font-weight: bold;
 }
 
 .buttons {
+  display: flex;
+  flex-wrap: wrap; 
   padding: 10px;
   margin: 10px 0px;
+  align-self: baseline;
 }
 
 #botonLimpiar {
@@ -393,4 +416,30 @@ label {
 
 #botonEnviar {
   min-width: 100px;
+}
+
+@keyframes toSpin {
+  0% { transform: rotate(0deg)}
+  10% { transform: rotate(36deg)}
+  20% { transform: rotate(72deg)}
+  30% { transform: rotate(108deg)}
+  40% { transform: rotate(144deg)}
+  50% { transform: rotate(180deg)}
+  60% { transform: rotate(216deg)}
+  70% { transform: rotate(252deg)}
+  80% { transform: rotate(288deg)}
+  90% { transform: rotate(324deg)}
+  100% { transform: rotate(360deg)}
+}
+
+#sunSpinner {
+  animation-name: toSpin;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-duration: 2s;
+  animation-delay: 0.5s;
+  /* cursor: auto; */
+  width: 64px;
+  height: 64px;
+  margin: 0px 10px;
 }
