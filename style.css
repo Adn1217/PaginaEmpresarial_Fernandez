@@ -81,6 +81,7 @@ header a {
 
 header a:hover {
   transform: scale(1.2);
+  text-decoration: underline;
 }
 
 header nav ul li {
@@ -110,10 +111,6 @@ header nav ul li:hover {
   background-color: rgb(255, 255, 83);
 }
 
-header a:hover {
-  text-decoration: underline;
-}
-
 .header__navBar a {
   text-decoration: none;
 }
@@ -135,6 +132,9 @@ img {
   cursor: pointer;
 }
 
+.inRow {
+  transition: transform 0.5s;
+}
 
 .inRow:hover { /* Imagenes del banner */
   transform:  translate(100px, 100px) scale(1.5);
@@ -195,12 +195,13 @@ article {
 }
 
 iframe{
+  border: solid 1px red;
+  bottom: 0;
+  height: 100%;
   position: absolute;
   top: 0;
-  bottom: 0;
   width: 100%;
-  height: 100%;
-  border: solid 1px red;
+  z-index: -1; /* Para que no tape a la imagen cuando se expande */
 }
 
 span{
@@ -287,6 +288,7 @@ footer{
 .projects img {
   width: 512px;
   height: 512px;
+  transition: transform 0.5s;
 }
 
 .projects img:hover {
