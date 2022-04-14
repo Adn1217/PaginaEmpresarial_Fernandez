@@ -79,6 +79,10 @@ header a {
   text-decoration: none;
 }
 
+header a:hover {
+  transform: scale(1.2);
+}
+
 header nav ul li {
   color: white;
   display: inline-block;
@@ -128,6 +132,20 @@ img {
   width: 256px;
   height: 256px;
   padding: 5px;
+  cursor: pointer;
+}
+
+
+.inRow:hover { /* Imagenes del banner */
+  transform:  translate(100px, 100px) scale(1.5);
+}
+
+.inRow:last-child:hover { /* Mantenerla dentro de la pantalla */
+  transform:  translate(-100px, 100px) scale(1.5);
+}
+
+table img:hover {
+  transform: scale(1.3);
 }
 
 .Referencia {
@@ -269,6 +287,10 @@ footer{
 .projects img {
   width: 512px;
   height: 512px;
+}
+
+.projects img:hover {
+  transform: translate(100px, 100px) scale(1.3);
 }
 
 .tabla {
