@@ -6,53 +6,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyecto</title>
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/Iconos/afc_favicon_logo/afc_favicon_logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css"/>
 </head>
 <body class="gridContainer">
-    <header>
-        <a title="Home" href="./index.html"><img id="header__logo" src="./assets/Iconos/Home.png" alt="Home Icon"></a>
-        <nav>
-            <ul class="header__navBar">
-                <li class="header__nav__option--active"><a  title="Home" href="./index.html">HOME</a></li>
-                <li><a title="Experience" href="./pags/experiencia.html">EXPERIENCIA</a></li>
-                <li><a title="Team" href="./pags/equipo.html">EQUIPO</a></li>
-                <li><a title="Project" href="./pags/proyectos.html">PROYECTOS</a></li>
-            </ul>
+    <header id="menuNav">
+        <a class="navbar-brand" title="Home" href="./index.html"><img id="header__logo" src="./assets/Iconos/Home.png" alt="Home Icon"></a>
+        <nav class="navbar navbar-expand-sm">
+            <div class="container-fluid">
+                <ul class="navbar-nav me-auto mb-2 mb-sm-0">
+                    <li class="header__nav__option--active"><a aria-curret="page" title="Home" href="./index.html">HOME</a></li>
+                    <li class="nav-item"><a title="Experience" href="./pags/experiencia.html">EXPERIENCIA</a></li>
+                    <li class="nav-item"><a title="Team" href="./pags/equipo.html">EQUIPO</a></li>
+                    <li class="nav-item"><a title="Project" href="./pags/proyectos.html">PROYECTOS</a></li>
+                </ul>
+            </div>
         </nav>
         <a class="header__last" title="Contact" href="./pags/contacto.html">CONTACTO</a>
     </header>
 
    <section class="Imagenes">
-       <div class="Imagenes__Imagen1 inRow">
+       <div id="projectsCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#projectsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#projectsCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#projectsCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#projectsCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+          <button type="button" data-bs-target="#projectsCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+        </div>
+        <div class="carousel-inner" data-interval="10000" >
+          <div class="carousel-item active">
             <img src="./assets/Imagenes/jeroen-van-de-water.jpg" alt="Paneles Solares 1" >
-            <div class="Imagenes__Imagen1 Referencia">
-                Photo by <a href="https://unsplash.com/@joenevdw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jeroen van de Water</a> on <a href="https://unsplash.com/s/photos/solar-cells?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-            </div> 
-       </div>
-       <div class="Imagenes__Imagen2 inRow">
+            <div class="carousel-caption d-none d-md-block">
+              Photo by <a href="https://unsplash.com/@thomas_coker_nz?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Thomas Coker</a> on <a href="https://unsplash.com/s/photos/solar-cells?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+            </div>
+          </div>
+          <div class="carousel-item" data-interval="10000">
             <img src="./assets/Imagenes/thomas-coker.jpg" alt="Paneles Solares 2">
-            <div class="Imagenes__Imagen2 Referencia">
+            <div class="carousel-caption d-none d-md-block">
                 Photo by <a href="https://unsplash.com/@thomas_coker_nz?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Thomas Coker</a> on <a href="https://unsplash.com/s/photos/solar-cells?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
             </div>
-       </div>
-       <div class="Imagenes__Imagen3 inRow">
+          </div>
+          <div class="carousel-item" data-interval="10000">
             <img src="./assets/Imagenes/vivint-solar.jpg" alt="Paneles Solares 3" >
-            <div class="Imagenes__Imagen3 Referencia">
+            <div class="carousel-caption d-none d-md-block">
                 Photo by <a href="https://unsplash.com/@vivintsolar?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Vivint Solar</a> on <a href="https://unsplash.com/s/photos/solar-cells?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
             </div>
-       </div>
-       <div class="Imagenes__Imagen4 inRow">
-            <img src="./assets/Imagenes/michael-fortsch.jpg" alt="Paneles Solares 4">
-            <div class="Imagenes__Imagen4 Referencia">
-                Photo by <a href="https://unsplash.com/@michael_f?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Michael Förtsch</a> on <a href="https://unsplash.com/s/photos/solar-cells?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+          </div>
+            <div class="carousel-item" data-interval="10000">
+                <img src="./assets/Imagenes/michael-fortsch.jpg" alt="Paneles Solares 4">
+                <div class="carousel-caption d-none d-md-block">
+                    Photo by <a href="https://unsplash.com/@michael_f?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Michael Förtsch</a> on <a href="https://unsplash.com/s/photos/solar-cells?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+                </div>
             </div>
-       </div>
-       <div class="Imagenes__Imagen5 inRow">
-            <img src="./assets/Imagenes/vivint-solar2.jpg" alt="Paneles Solares 5">
-            <div class="Imagenes__Imagen5 Referencia">
-                Photo by <a href="https://unsplash.com/@vivintsolar?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Vivint Solar</a> on <a href="https://unsplash.com/s/photos/solar-cells?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+            <div class="carousel-item" data-interval="10000">
+                <img src="./assets/Imagenes/vivint-solar2.jpg" alt="Paneles Solares 5">
+                <div class="carousel-caption d-none d-md-block">
+                    Photo by <a href="https://unsplash.com/@vivintsolar?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Vivint Solar</a> on <a href="https://unsplash.com/s/photos/solar-cells?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+                </div>
             </div>
-       </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#projectsCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#projectsCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
     </section>
   
   <section class="info">
@@ -73,5 +95,6 @@
     <footer>
         <p>Autor: Adrián Fernández Cabrera <a href="mailto:adn1217@hotmail.com">adn1217@hotmail.com</a></p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>
