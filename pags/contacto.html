@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./../style.css"/>
 </head>
 <body class="gridContainerContact">
-    <header>
+    <!-- <header>
         <a title="Home" href="./../index.html"><img id="header__logo" src="./../assets/Iconos/Home.png" alt="Home Icon"></a>
         <nav>
             <ul class="header__navBar">
@@ -21,7 +21,21 @@
             </ul>
         </nav>
         <a class="header__nav__option--active header__last" title="Contact" href="./contacto.html">CONTACTO</a>
-    </header>
+    </header-> -->
+    <header id="menuNav">
+      <a class="navbar-brand" title="Home" href="./../index.html"><img id="header__logo" src="./../assets/Iconos/Home.png" alt="Home Icon"></a>
+      <nav class="navbar navbar-expand-sm">
+          <div class="container-fluid">
+              <ul class="navbar-nav me-auto mb-2 mb-sm-0">
+                  <li class="nav-item"><a aria-curret="page" title="Home" href="./../index.html">HOME</a></li>
+                  <li class="nav-item"><a title="Experience" href="./experiencia.html">EXPERIENCIA</a></li>
+                  <li class="nav-item"><a title="Team" href="./equipo.html">EQUIPO</a></li>
+                  <li class="nav-item"><a title="Project" href="./proyectos.html">PROYECTOS</a></li>
+              </ul>
+          </div>  
+      </nav>
+      <a class="header__last header__nav__option--active" title="Contact" href="./contacto.html">CONTACTO</a>
+  </header>
     <section>
         <div class="tabla">
             <table class="table table-hover tablaContacto">

@@ -70,8 +70,6 @@ header {
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: left;
-
-    /* align-items: left; */
   }
 }
 
@@ -105,35 +103,19 @@ header nav ul li {
   background-color: rgb(255, 255, 83);
 }
 
-@media screen and (max-width: 630px) {
-  .header__last {
-    padding: 0px;
-  }
-}
-
-.header__nav__option--active
-/* , [aria-current="page"]  */
-{
+.header__nav__option--active {
   background-color: orangered;
 }
 
 header nav ul li:hover {
-  /* background-color: yellow; */
   background-color: rgb(255, 255, 83);
 }
-
-/* .header__navBar a {
-  text-decoration: none;
-} */
 
 .Imagenes {
   display: inline-block;
   grid-area: Imagenes;
   margin: 10px auto;
   /* width: 90%;  */
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap ;
 }
 
 img {
@@ -155,18 +137,6 @@ img {
   }
 }
 
-.inRow {
-  transition: transform 0.5s;
-}
-
-.inRow:hover { /* Imagenes del banner */
-  transform:  translate(100px, 100px) scale(1.5);
-}
-
-.inRow:last-child:hover { /* Mantenerla dentro de la pantalla */
-  transform:  translate(-100px, 100px) scale(1.5);
-}
-
 table img {
   transition: transform 0.5s;
 }
@@ -181,10 +151,8 @@ table img:hover {
 
 .info {
   align-items: stretch;
-  /* display: flex; */
   display: grid;
   grid-column: 1/5;
-  /* flex-direction: column; */
   height: auto;
   margin: 10px auto;
   min-height: 100%;
@@ -234,7 +202,7 @@ iframe{
   position: absolute;
   top: 0;
   width: 100%;
-  z-index: -1; /* Para que no tape a la imagen cuando se expande */
+  /* z-index: -1; Para que no tape a la imagen cuando se expande */
 }
 
 span{
@@ -317,7 +285,7 @@ footer{
     padding: 25px;
   }
 }
-  
+
 .projects img {
   width: 512px;
   height: 512px;
@@ -431,7 +399,7 @@ label {
 }
 
 #server {
-  display:flex;
+  display: flex;
   width: 50%;
 }
 
