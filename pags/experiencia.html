@@ -5,60 +5,82 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EXPERIENCIA</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="icon" type="image/png" sizes="16x16" href="./../assets/Iconos/afc_favicon_logo/afc_favicon_logo.png">
     <link rel="stylesheet" href="./../style.css"/>
 </head>
 <body class="gridContainer">
-    <header>
-        <a title="Home" href="./../index.html"><img id="header__logo" src="./../assets/Iconos/Home.png" alt="Home Icon"></a>
-        <nav>
-            <ul class="header__navBar">
-                <li><a  title="Home" href="./../index.html">HOME</a></li>
-                <li class="header__nav__option--active"><a title="Experience" href="./experiencia.html">EXPERIENCIA</a></li>
-                <li><a title="Team" href="./equipo.html">EQUIPO</a></li>
-                <li><a title="Project" href="./proyectos.html">PROYECTOS</a></li>
-            </ul>
+    <header id="menuNav">
+        <a class="navbar-brand" title="Home" href="./../index.html"><img id="header__logo" src="./../assets/Iconos/Home.png" alt="Home Icon"></a>
+        <nav class="navbar navbar-expand-sm">
+            <div class="container-fluid">
+                <ul class="navbar-nav me-auto mb-2 mb-sm-0">
+                    <li class="nav-item"><a aria-curret="page" title="Home" href="./../index.html">HOME</a></li>
+                    <li class="header__nav__option--active"><a title="Experience" href="./experiencia.html">EXPERIENCIA</a></li>
+                    <li class="nav-item"><a title="Team" href="./equipo.html">EQUIPO</a></li>
+                    <li class="nav-item"><a title="Project" href="./proyectos.html">PROYECTOS</a></li>
+                </ul>
+            </div>
         </nav>
         <a class="header__last" title="Contact" href="./contacto.html">CONTACTO</a>
     </header>
 
-    <section class="Imagenes">
-        <div class="Imagenes__Imagen1 inRow">
-                <img src="./../assets/Imagenes/jeroen-van-de-water.jpg" alt="Paneles Solares 1" >
-                <div class="Imagenes__Imagen1 Referencia">
-                    Photo by <a href="https://unsplash.com/@joenevdw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jeroen van de Water</a> on <a href="https://unsplash.com/s/photos/solar-cells?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-                </div> 
+   <section class="Imagenes">
+       <div id="projectsCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#projectsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#projectsCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#projectsCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#projectsCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+          <button type="button" data-bs-target="#projectsCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
         </div>
-        <div class="Imagenes__Imagen2 inRow">
-                <img src="./../assets/Imagenes/thomas-coker.jpg" alt="Paneles Solares 2">
-                <div class="Imagenes__Imagen2 Referencia">
-                    Photo by <a href="https://unsplash.com/@thomas_coker_nz?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Thomas Coker</a> on <a href="https://unsplash.com/s/photos/solar-cells?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-                </div>
-        </div>
-        <div class="Imagenes__Imagen3 inRow">
-                <img src="./../assets/Imagenes/vivint-solar.jpg" alt="Paneles Solares 3" >
-                <div class="Imagenes__Imagen3 Referencia">
-                    Photo by <a href="https://unsplash.com/@vivintsolar?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Vivint Solar</a> on <a href="https://unsplash.com/s/photos/solar-cells?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-                </div>
-        </div>
-        <div class="Imagenes__Imagen4 inRow">
+        <div class="carousel-inner" data-interval="10000" >
+          <div class="carousel-item active">
+            <img src="./../assets/Imagenes/jeroen-van-de-water.jpg" alt="Paneles Solares 1" >
+            <div class="carousel-caption d-none d-md-block">
+              Photo by <a href="https://unsplash.com/@thomas_coker_nz?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Thomas Coker</a> on <a href="https://unsplash.com/s/photos/solar-cells?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+            </div>
+          </div>
+          <div class="carousel-item" data-interval="10000">
+            <img src="./../assets/Imagenes/thomas-coker.jpg" alt="Paneles Solares 2">
+            <div class="carousel-caption d-none d-md-block">
+                Photo by <a href="https://unsplash.com/@thomas_coker_nz?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Thomas Coker</a> on <a href="https://unsplash.com/s/photos/solar-cells?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+            </div>
+          </div>
+          <div class="carousel-item" data-interval="10000">
+            <img src="./../assets/Imagenes/vivint-solar.jpg" alt="Paneles Solares 3" >
+            <div class="carousel-caption d-none d-md-block">
+                Photo by <a href="https://unsplash.com/@vivintsolar?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Vivint Solar</a> on <a href="https://unsplash.com/s/photos/solar-cells?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+            </div>
+          </div>
+            <div class="carousel-item" data-interval="10000">
                 <img src="./../assets/Imagenes/michael-fortsch.jpg" alt="Paneles Solares 4">
-                <div class="Imagenes__Imagen4 Referencia">
+                <div class="carousel-caption d-none d-md-block">
                     Photo by <a href="https://unsplash.com/@michael_f?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Michael Förtsch</a> on <a href="https://unsplash.com/s/photos/solar-cells?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
                 </div>
-        </div>
-        <div class="Imagenes__Imagen5 inRow">
+            </div>
+            <div class="carousel-item" data-interval="10000">
                 <img src="./../assets/Imagenes/vivint-solar2.jpg" alt="Paneles Solares 5">
-                <div class="Imagenes__Imagen5 Referencia">
+                <div class="carousel-caption d-none d-md-block">
                     Photo by <a href="https://unsplash.com/@vivintsolar?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Vivint Solar</a> on <a href="https://unsplash.com/s/photos/solar-cells?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
                 </div>
+            </div>
         </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#projectsCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#projectsCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
     </section>
     <section>
         <table class="tabla">
             <tr>
                 <td>
-                <img id="paneles1" src="./../assets/Imagenes/jeroen-van-de-water.jpg" alt="Paneles Solares 1" style="width:256px;height:256px">
+                <img id="paneles1" src="./../assets/Imagenes/jeroen-van-de-water.jpg" alt="Paneles Solares 1">
                 </td>
                 <td>
                     Proyecto en empresa privada de 750 kW en la ciudad de Melbourne. El proyecto permitió la autosuficiencia energética de la empresa en su HQ principal, permitiendo la desconexión total del edificio de la red de energía local.
@@ -66,7 +88,7 @@
             </tr>
             <tr>
                 <td>
-                <img id="paneles2" src="./../assets/Imagenes/thomas-coker.jpg" alt="Paneles Solares 2" style="width:256px;height:256px">
+                <img id="paneles2" src="./../assets/Imagenes/thomas-coker.jpg" alt="Paneles Solares 2">
                 </td>
                 <td>
                     Proyecto de 5 MW asociado a la expansión energética del estado de Colorado. Permitió reducir las emisiones asociadas a la generación térmica que reemplazó. En este proyecto la empresa se encargó de los estudios energéticos de irradiación de irradiación solar.
@@ -74,7 +96,7 @@
             </tr>
             <tr>
                 <td>
-                <img id="paneles3" src="./../assets/Imagenes/vivint-solar.jpg" alt="Paneles Solares 3" style="width:256px;height:256px">
+                <img id="paneles3" src="./../assets/Imagenes/vivint-solar.jpg" alt="Paneles Solares 3">
                 </td>
                 <td>
                 Proyecto con capacidad de 120 kW fotovoltaicos para usuario residencial. El proyecto permitió la autosuficiencia eléctrica del usuario.
@@ -82,7 +104,7 @@
             </tr>
             <tr>
                 <td>
-                <img id="paneles4" src="./../assets/Imagenes/michael-fortsch.jpg" alt="Paneles Solares 4" style="width:256px;height:256px">
+                <img id="paneles4" src="./../assets/Imagenes/michael-fortsch.jpg" alt="Paneles Solares 4">
                 </td>
                 <td>
                 Proyecto fotovoltaico de 5 MW asociado al proyecto de expansión colombiano. Localizado en el municipio de El Paso, departamento del Cesar. Está alineado con el plan de transición energética en la cual está inmerso el sistema eléctrico colombiao.
@@ -90,7 +112,7 @@
             </tr>
             <tr>
                 <td>
-                <img id="paneles5" src="./../assets/Imagenes/vivint-solar2.jpg" alt="Paneles Solares 5" style="width:256px;height:256px">
+                <img id="paneles5" src="./../assets/Imagenes/vivint-solar2.jpg" alt="Paneles Solares 5">
                 </td>
                 <td>
                 Proyecto con capacidad de 150 kW fotovoltaicos para usuario residencial. El proyecto permitió la autosuficiencia eléctrica del usuario.
@@ -115,5 +137,6 @@
         <p>Autor: Adrián Fernández Cabrera</p>
         <p><a href="mailto:adn1217@hotmail.com">adn1217@hotmail.com</a></p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>
