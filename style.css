@@ -308,8 +308,7 @@ table, .tabla, .table {
   border-spacing: 2px;
   border-collapse: separate;
   grid-area: tabla;
-  margin-top: 10px;
-  margin-left: auto;
+  margin: 10px auto;
   width: 95%;
   /* min-width: 80%; */
 }
@@ -320,24 +319,33 @@ table, .tabla, .table {
 }
 
 .tablaContacto td {
-  min-width: 75px;
+  /* min-width: 100px; */
   max-width: 150px;
   /* width: 120px;  */
   border: none;
 }
 
 .tablaContacto th {
-  min-width: 50px;
+  min-width: 80px;
   border: none;
 }
 
 @media screen and (max-width: 450px) {
+
+  .tablaContacto th {
+    margin: auto;
+  }
+
   .tablaContacto tr {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     width: 100%;
     height: auto;
+  }
+
+  .tablaContacto td {
+    min-width: 240px;
   }
 }
 
