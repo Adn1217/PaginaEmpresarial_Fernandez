@@ -1,0 +1,490 @@
+@import "colores";
+@import "layout";
+@import "sizes";
+
+
+@font-face { 
+  font-family: "Roboto Thin"; 
+  src: url("./../assets/fonts/Roboto-Thin.ttf"); 
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#header__logo {
+  width: $home-icon-width;
+  height: $home-icon-height;
+  cursor: pointer;
+}
+
+@media screen and (max-width: $home-icon-hide-width) {
+
+  #header__logo {
+    display: none;
+  }
+
+}
+
+.gridContainer {
+  background-image: linear-gradient(to top, $background-color1 , $background-color2);
+  display: grid;
+  grid-template-areas: $general-layout;
+  grid-template-rows: $layout-rows-height;
+  grid-template-columns: $layout-columns-height;
+}
+
+.gridContainerContact {
+  /* background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%); */
+  background-image: linear-gradient($gradient-angle, $background-color1 0%, $background-color2 100%);
+  display: grid;
+  grid-template-areas: $contact-layout;
+  grid-template-rows: $layout-rows-height;
+  grid-template-columns: $layout-columns-height;
+}
+
+header {
+  grid-area:header;
+  /* background-color: orange; */
+  /* background-image: linear-gradient(to right, rgb(255, 255, 83) 0%, rgb(255, 187, 60) 100%); */
+  /* background-color:rgb(255, 187, 60); */
+  /* background-image: linear-gradient(to bottom,yellow , orange); */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: $header-padding-left;
+  width: 100%;
+    a {
+    color: white;
+    display: inline-block;
+    /* border-right: 1px solid white;*/
+    padding: $header-items-padding;
+    text-decoration: none;
+
+    &:hover {
+        color: white;
+        transform: scale($header-hover-scale);
+        text-decoration: underline;
+        }
+    }
+
+    & nav ul li {
+        padding: $header-list-padding;
+        
+      & :hover {
+          background-color: $background-color1;
+      }
+    }
+}
+
+@media screen and (max-width: $header-flex-width) {
+
+  header {
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: left;
+  }
+}
+
+.header__last {
+  padding: $header-last-item-padding;
+
+  &:hover {
+    background-color: $background-color1;
+  }
+}
+
+.header__nav__option--active {
+  background-color: $header-active-option-color;
+}
+
+.Imagenes {
+  display: inline-block;
+  grid-area: Imagenes;
+  margin: $carousel-margin;
+  /* width: $carousel-width;  */
+}
+
+img {
+  width: $images-width;
+  height: $images-height;
+  padding: $images-padding;
+  cursor: pointer;
+}
+
+.carousel-inner img {
+  width: $carousel-image-width;
+  height: $carousel-image-height;
+  cursor: auto;
+}
+
+@media screen and (max-width: $header-flex-width) {
+  .carousel-inner img {
+    width: $carousel-image-flexed-width;
+  }
+}
+
+article {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  min-width: $article-min-width;
+}
+
+.info {
+  align-items: stretch;
+  display: grid;
+  grid-column-start: $info-grid-column-start;
+  grid-column-end: $info-grid-column-end;
+  margin: $info-margin;
+  padding: $info-padding;
+  width: $info-width;
+}
+
+.info__resume { 
+  grid-area: info__resume;
+  display: inline-block;
+  background-image: url(./assets/Imagenes/panel_fondo.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: $info__resume-background-size;
+  font-family: "Roboto Thin", cursive;
+  padding: $info__resume-padding;
+  width: $info__resume-width;
+  min-width: $info__resume-min-width;
+  /* max-width: 80%; */
+}
+
+.info__video {
+  grid-area: info__video;
+  display: inline-block;
+  position: relative;
+  width: $info__video-width;  
+  min-height: $info__video-min-height;
+  min-width: $info__video-min-width;
+  max-height: $info__video-max-height;
+  max-width: $info__video-max-width;
+}
+
+iframe{
+  border: solid 1px $iframe-border-color;
+  height: $iframe-height;
+  position: absolute;
+  width: $iframe-width;
+  /* z-index: -1; Para que no tape a la imagen cuando se expande */
+}
+
+span{
+  display: inline-block;
+  padding-top: $span-top-padding;
+}
+
+footer{
+  grid-area: footer;
+  display: block;
+  padding: $footer-padding;
+}
+
+// ################################################
+// AQUI INICIAN LOS ESTILOS DE LAS OTRAS PÁGINAS 
+// (SIN SASS HASTA EL MOMENTO)
+// ################################################
+
+table img {
+  transition: transform 0.5s;
+}
+
+table img:hover {
+  transform: scale(1.3);
+}
+
+.Referencia {
+  font-style: italic;
+}
+
+td { 
+    border: 2px solid;
+    padding: 10px;
+}
+
+tr {
+  flex-wrap: no-wrap;
+  width: 100%;
+}
+
+/* table {
+  display: flex;
+  padding: 20px 0px;
+  width: 100%;
+} */
+
+@media screen and (max-width: 428px) {
+  table img {
+    min-width: 100%;
+    min-height: 100%;
+  }
+
+  tr {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.additionalExp {
+  /* background-color: gainsboro; */
+  list-style-type: none ;
+  margin: 2%;
+  width: 95%;
+}
+
+@media screen and (max-width: 800px) {
+  .teamMembers img {
+    min-width: 650px;
+    min-height:650px; 
+    padding: 25px;
+  }
+
+  tr {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 660px){
+  .teamMembers img {
+    min-width: 512px;
+    min-height:512px; 
+    padding: 25px;
+  }
+}
+
+@media screen and (max-width: 550px){
+  .teamMembers img {
+    min-width: 256px;
+    min-height:256px; 
+    padding: 25px;
+  }
+}
+
+.projects img {
+  width: 512px;
+  height: 512px;
+  transition: transform 0.5s;
+}
+
+.projects img:hover {
+  transform: translate(100px, 100px) scale(1.3);
+}
+
+table, .tabla, .table {
+  /* margin: 2%; */
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+}
+
+.tablaContacto {
+  border:2px solid;
+  border-spacing: 2px;
+  border-collapse: separate;
+  grid-area: tabla;
+  margin: 10px auto;
+  width: 95%;
+  /* min-width: 80%; */
+}
+
+.tablaContacto tr {
+  display: table;
+  flex-wrap: no-wrap;
+}
+
+.tablaContacto td {
+  /* min-width: 100px; */
+  max-width: 150px;
+  /* width: 120px;  */
+  border: none;
+}
+
+.tablaContacto th {
+  min-width: 80px;
+  border: none;
+}
+
+@media screen and (max-width: 450px) {
+
+  .tablaContacto th {
+    margin: auto;
+  }
+
+  .tablaContacto tr {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+  }
+
+  .tablaContacto td {
+    min-width: 240px;
+  }
+}
+
+.register {
+  grid-area: registro;
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+}
+
+fieldset {
+  border: 1px solid gray;
+  padding: 10px;
+  margin: 10px 0px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+input {
+  display: inline-block;
+  padding: 10px;
+  margin: 5px;
+  width: 20%;
+}
+
+.form-control {
+  margin: 0px 5px;
+}
+
+#initFields .form-control, .form-select{
+  margin: 5px;
+  min-width: 150px;
+  max-width: 50%;
+}
+
+#initFields__EdadPais {
+  /* max-width: 50%; */
+  display: flex;
+  width: 50%;
+}
+
+#initFields__EdadPais input {
+  min-width: 20%;
+}
+
+label {
+  padding: 0px 5px;
+  margin: 5px;
+}
+
+.credentials, .bulletin {
+  padding: 10px;
+  width: 50%;
+  min-width: 300px;
+}
+
+#server {
+  display: flex;
+  width: 50%;
+}
+
+#credenciales span{
+  width: 30%;
+  max-width: 40px;
+}
+
+#server input {
+  margin-left: 0px;
+  min-width: 70%;
+}
+
+.bulletin .input-group div {
+  width: 100%;
+ }
+
+@media screen and (max-width: 340px) {
+  .credentials, .bulletin {
+    min-width: 90%;
+  }
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 95%;
+    height: auto;
+  }
+
+  #credenciales input {
+    margin: 2px 0px;
+    width: 100%;
+  }
+
+  #server {
+    display:flex;
+    width: 100%;
+
+  }
+  #credenciales span{
+    margin: 2px 0px;
+  }
+}
+
+#countries {
+  display: inline-block;
+  padding: 10px;
+  margin: 5px;
+  min-width: 150px;
+}
+
+input[type="radio"]:checked + label{
+  font-weight: bold;
+}
+
+#botonLimpiar {
+  min-width: 100px;
+}
+
+#botonEnviar, #botonCargando {
+  min-width: 100px;
+  background-color: rgb(255, 187, 60);
+  border-color: rgb(255, 187, 60);
+;
+}
+
+@keyframes toSpin {
+  0% { transform: rotate(0deg)}
+  10% { transform: rotate(36deg)}
+  20% { transform: rotate(72deg)}
+  30% { transform: rotate(108deg)}
+  40% { transform: rotate(144deg)}
+  50% { transform: rotate(180deg)}
+  60% { transform: rotate(216deg)}
+  70% { transform: rotate(252deg)}
+  80% { transform: rotate(288deg)}
+  90% { transform: rotate(324deg)}
+  100% { transform: rotate(360deg)}
+}
+
+#sunSpinner {
+  animation-name: toSpin;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-duration: 2s;
+  animation-delay: 0.5s;
+  /* cursor: auto; */
+  width: 64px;
+  height: 64px;
+  margin: 0px 10px;
+}
