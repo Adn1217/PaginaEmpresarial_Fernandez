@@ -74,7 +74,7 @@ header {
     & nav ul li {
         padding: $header-list-padding;
         
-      & :hover {
+      &:hover {
           background-color: $background-color1;
       }
     }

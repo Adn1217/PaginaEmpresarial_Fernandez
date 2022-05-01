@@ -55,7 +55,7 @@ header {
       text-decoration: underline; }
   header nav ul li {
     padding: 24px 0px; }
-    header nav ul li :hover {
+    header nav ul li:hover {
       background-color: #ffff53; }
 
 @media screen and (max-width: 630px) {
