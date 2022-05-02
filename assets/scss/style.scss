@@ -182,10 +182,40 @@ span{
   padding-top: $span-top-padding;
 }
 
+.color-Facebook {
+  color: map-get($map: $socialNetworks-colors, $key: Facebook);
+}
+.color-Twitter {
+  color: map-get($map: $socialNetworks-colors, $key: Twitter);
+}
+.color-Instagram {
+  color: map-get($map: $socialNetworks-colors, $key: Instagram);
+}
+
 footer{
   grid-area: footer;
-  display: block;
+  display: inline-block;
   padding: $footer-padding;
+  & span {
+    padding: 10px;
+  }
+
+  & i {
+    display: inline-block;
+    padding: 0px 10%;
+  }
+
+  @media screen and (max-width: 738px) {
+    & {
+      display: flex;
+      flex-direction: column;
+
+      & i {
+        display: inline-block;
+        padding: 10px;
+      }
+    }
+  }
 }
 
 // ################################################
