@@ -13,13 +13,18 @@ $socialNetworks-colors: (
     Twitter:#00acee,
     Instagram: #E1306C,
 );
+// Aplicación de Each
 
-.color-Facebook {
-  color: map-get($map: $socialNetworks-colors, $key: Facebook);
+@each $red, $color in $socialNetworks-colors {
+    .color-#{$red} {
+        color: $color
 }
-.color-Twitter {
-  color: map-get($map: $socialNetworks-colors, $key: Twitter);
-}
-.color-Instagram {
-  color: map-get($map: $socialNetworks-colors, $key: Instagram);
+// .color-Facebook {
+//   color: map-get($map: $socialNetworks-colors, $key: Facebook);
+// }
+// .color-Twitter {
+//   color: map-get($map: $socialNetworks-colors, $key: Twitter);
+// }
+// .color-Instagram {
+//   color: map-get($map: $socialNetworks-colors, $key: Instagram);
 }

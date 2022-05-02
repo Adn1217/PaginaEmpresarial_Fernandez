@@ -147,18 +147,9 @@ iframe {
   width: 100%;
   /* z-index: -1; Para que no tape a la imagen cuando se expande */ }
 
-span {
+span, footer span {
   display: inline-block;
   padding-top: 3%; }
-
-.color-Facebook {
-  color: #3b5998; }
-
-.color-Twitter {
-  color: #00acee; }
-
-.color-Instagram {
-  color: #E1306C; }
 
 footer {
   grid-area: footer;
