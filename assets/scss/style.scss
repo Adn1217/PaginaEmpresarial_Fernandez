@@ -74,7 +74,7 @@ header {
     & nav ul li {
         padding: $header-list-padding;
         
-      & :hover {
+      &:hover {
           background-color: $background-color1;
       }
     }
@@ -158,15 +158,24 @@ article {
   /* max-width: 80%; */
 }
 
+// Aplicación de Mixin
+@mixin videoSizes($vmin-height, $vmin-width, $vmax-height, $vmax-width){
+    min-height: $vmin-height;
+    min-width: $vmin-width;
+    max-height: $vmax-height;
+    max-width: $vmax-width;
+}
+
 .info__video {
   grid-area: info__video;
   display: inline-block;
   position: relative;
   width: $info__video-width;  
-  min-height: $info__video-min-height;
-  min-width: $info__video-min-width;
-  max-height: $info__video-max-height;
-  max-width: $info__video-max-width;
+  @include videoSizes($info__video-min-height, $info__video-min-width, $info__video-max-height, $info__video-max-width)
+  // min-height: $info__video-min-height;
+  // min-width: $info__video-min-width;
+  // max-height: $info__video-max-height;
+  // max-width: $info__video-max-width;
 }
 
 iframe{
@@ -182,10 +191,32 @@ span{
   padding-top: $span-top-padding;
 }
 
+// Aplicación de Extend para heredar (y pisar) propiedades de span
 footer{
   grid-area: footer;
-  display: block;
+  display: inline-block;
   padding: $footer-padding;
+  & span {
+    @extend span;
+    padding: 10px;
+  }
+
+  & i {
+    display: inline-block;
+    padding: 0px 10%;
+  }
+
+  @media screen and (max-width: 738px) {
+    & {
+      display: flex;
+      flex-direction: column;
+
+      & i {
+        display: inline-block;
+        padding: 10px;
+      }
+    }
+  }
 }
 
 // ################################################

@@ -6,3 +6,25 @@ $gradient-angle: 120deg;
 $header-active-option-color: orangered; 
 
 $iframe-border-color: red;
+
+// Aplicación de MAPs
+$socialNetworks-colors: (
+    Facebook: #3b5998,
+    Twitter:#00acee,
+    Instagram: #E1306C,
+);
+// Aplicación de Each
+
+@each $red, $color in $socialNetworks-colors {
+    .color-#{$red} {
+        color: $color
+}
+// .color-Facebook {
+//   color: map-get($map: $socialNetworks-colors, $key: Facebook);
+// }
+// .color-Twitter {
+//   color: map-get($map: $socialNetworks-colors, $key: Twitter);
+// }
+// .color-Instagram {
+//   color: map-get($map: $socialNetworks-colors, $key: Instagram);
+}
