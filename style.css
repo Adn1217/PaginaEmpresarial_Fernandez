@@ -75,7 +75,7 @@ header {
 
 header a {
   color: white;
-  display: inline-block;
+  /* display: inline-block; */
   /* border-right: 1px solid white;*/
   padding: 0px 10px;
   text-decoration: none;
@@ -89,7 +89,7 @@ header a:hover {
 
 header nav ul li {
   color: white;
-  display: inline-block;
+  /* display: inline-block; */
   justify-content: center;
   padding: 24px 0px;
   text-decoration: none;
@@ -243,6 +243,7 @@ tr {
 
 .additionalExp {
   /* background-color: gainsboro; */
+  grid: addExp;
   list-style-type: none ;
   margin: 2%;
   width: 95%;

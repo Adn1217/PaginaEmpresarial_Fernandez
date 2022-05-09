@@ -28,12 +28,18 @@
 
 }
 
+
 .gridContainer {
   background-image: linear-gradient(to top, $background-color1 , $background-color2);
   display: grid;
   grid-template-areas: $general-layout;
   grid-template-rows: $layout-rows-height;
   grid-template-columns: $layout-columns-height;
+}
+
+.IndexgridContainer {
+  @extend .gridContainer;
+  grid-template-areas: $index-layout;
 }
 
 .gridContainerContact {
@@ -219,17 +225,19 @@ footer{
   }
 }
 
-// ################################################
-// AQUI INICIAN LOS ESTILOS DE LAS OTRAS PÁGINAS 
-// (SIN SASS HASTA EL MOMENTO)
-// ################################################
-
-table img {
-  transition: transform 0.5s;
+// ############ EXPERIENCIA #######################
+table {
+  & img {
+    transition: transform 0.5s;
+    &:hover {
+      transform: scale(1.3);
+    }
+  }
 }
 
-table img:hover {
-  transform: scale(1.3);
+.Experiencia {
+  grid-area: Cuerpo;
+  width: $cuerpo-width;
 }
 
 .Referencia {
@@ -237,13 +245,13 @@ table img:hover {
 }
 
 td { 
-    border: 2px solid;
-    padding: 10px;
+    border: $table-border solid;
+    padding: $table-column-padding;
 }
 
 tr {
   flex-wrap: no-wrap;
-  width: 100%;
+  width: $table-row-width;
 }
 
 /* table {
@@ -252,28 +260,38 @@ tr {
   width: 100%;
 } */
 
-@media screen and (max-width: 428px) {
-  table img {
-    min-width: 100%;
-    min-height: 100%;
+@media screen and (max-width: $table-flex-width) {
+  table {
+    & img {
+      min-width: $table-img-min-width;
+      min-height: $table-img-min-height;
+    }
   }
 
   tr {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    width: 100%;
+    width: $table-img-min-height;
     height: auto;
   }
 }
 
-.additionalExp {
+#additionalExp {
   /* background-color: gainsboro; */
-  list-style-type: none ;
-  margin: 2%;
-  width: 95%;
+  list-style-type: $additionalExp-list-style;
+  margin: $additionExp-margin;
+  width: $additionalExp-width;
+  & h1 {
+    padding-top: 10px;
+  }
 }
 
+// ################################################
+// AQUI INICIAN LOS ESTILOS DE LAS OTRAS PÁGINAS 
+// (SIN SASS HASTA EL MOMENTO)
+// ################################################
+// ############## EQUIPO ##########################
 @media screen and (max-width: 800px) {
   .teamMembers img {
     min-width: 650px;
