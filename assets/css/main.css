@@ -128,9 +128,10 @@ article {
   background-repeat: no-repeat;
   background-size: 80%;
   font-family: "Roboto Thin", cursive;
-  padding: 5px;
+  padding: 15px;
   width: 40%;
   min-width: 350px;
+  text-align: justify;
   /* max-width: 80%; */ }
 
 .info__video {
