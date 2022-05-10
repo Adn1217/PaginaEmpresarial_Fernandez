@@ -230,14 +230,12 @@ tr {
 @media screen and (max-width: 660px) {
   .teamMembers img {
     min-width: 512px;
-    min-height: 512px;
-    padding: 25px; } }
+    min-height: 512px; } }
 
 @media screen and (max-width: 550px) {
   .teamMembers img {
     min-width: 256px;
-    min-height: 256px;
-    padding: 25px; } }
+    min-height: 256px; } }
 
 .projects img {
   width: 512px;

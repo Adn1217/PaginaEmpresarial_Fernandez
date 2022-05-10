@@ -272,7 +272,7 @@ tr {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    width: $table-img-min-height;
+    width: $table-flex-row-width;
     height: auto;
   }
 }
@@ -287,43 +287,45 @@ tr {
   }
 }
 
-// ################################################
-// AQUI INICIAN LOS ESTILOS DE LAS OTRAS PÁGINAS 
-// (SIN SASS HASTA EL MOMENTO)
-// ################################################
 // ############## EQUIPO ##########################
-@media screen and (max-width: 800px) {
-  .teamMembers img {
-    min-width: 650px;
-    min-height:650px; 
-    padding: 25px;
+@media screen and (max-width: $members-flex-max-width1) {
+
+  .teamMembers {
+    & img {
+      min-width: $membersImgs-flex-min-width;
+      min-height: $membersImgs-flex-min-height; 
+      padding: $membersImgs-padding;
+    }
   }
 
   tr {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    width: 100%;
+    width: $table-flex-row-width;
     height: auto;
   }
 }
 
-@media screen and (max-width: 660px){
+@media screen and (max-width: $members-flex-max-width2){
   .teamMembers img {
-    min-width: 512px;
-    min-height:512px; 
-    padding: 25px;
+    min-width: $membersImgs-flex-min-height2;
+    min-height:$membersImgs-flex-min-height2; 
   }
 }
 
-@media screen and (max-width: 550px){
+@media screen and (max-width: $members-flex-max-width3){
   .teamMembers img {
-    min-width: 256px;
-    min-height:256px; 
-    padding: 25px;
+    min-width: $membersImgs-flex-min-width3;
+    min-height:$membersImgs-flex-min-height3; 
   }
 }
 
+// ################################################
+// AQUI INICIAN LOS ESTILOS DE LAS OTRAS PÁGINAS 
+// (SIN SASS HASTA EL MOMENTO)
+// ################################################
+// ################ PROYECTOS #####################
 .projects img {
   width: 512px;
   height: 512px;
