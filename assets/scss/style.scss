@@ -52,7 +52,7 @@
 }
 
 header {
-  grid-area:header;
+  grid-area: header;
   /* background-color: orange; */
   /* background-image: linear-gradient(to right, rgb(255, 255, 83) 0%, rgb(255, 187, 60) 100%); */
   /* background-color:rgb(255, 187, 60); */
@@ -334,61 +334,56 @@ tr {
   }
 }
 
-table, .tabla, .table {
+table, .tabla {
   /* margin: 2%; */
+  grid-area: tabla;
   margin-left: auto;
   margin-right: auto;
   width: 95%;
 }
 
-// ################################################
-// AQUI INICIAN LOS ESTILOS DE LAS OTRAS PÁGINAS 
-// (SIN SASS HASTA EL MOMENTO)
-// ################################################
-
+// ################ CONTACTO ######################
 .tablaContacto {
   border: $tablaContacto-border solid;
   border-spacing: $tablaContacto-spacing;
   border-collapse: separate;
   grid-area: tabla;
-  margin: 10px auto;
-  width: 95%;
+  margin: $tablaContacto-margin-topBottom auto;
+  width: $tablaContacto-width;
   /* min-width: 80%; */
-}
-
-.tablaContacto tr {
-  display: table;
-  flex-wrap: no-wrap;
-}
-
-.tablaContacto td {
-  /* min-width: 100px; */
-  max-width: 150px;
-  /* width: 120px;  */
-  border: none;
-}
-
-.tablaContacto th {
-  min-width: 80px;
-  border: none;
-}
-
-@media screen and (max-width: 450px) {
-
-  .tablaContacto th {
-    margin: auto;
+  & tr {
+    display: table;
+    flex-wrap: no-wrap;
+    table-layout: fixed;
   }
-
-  .tablaContacto tr {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    width: 100%;
-    height: auto;
+  & td {
+    max-width: $tablaContacto-column-max-width;
+    border: none;
   }
+  & th {
+    min-width: $tablaContacto-columnHeader-min-width;
+    border: none;
+  }
+}
 
-  .tablaContacto td {
-    min-width: 240px;
+@media screen and (max-width: $tablaContacto-flex-max-width) {
+
+  .tablaContacto {
+      & th {
+        margin: auto;
+      }
+
+      & tr {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: $tablaContacto-flex-row-width;
+        height: auto;
+      }
+      
+      & td {
+        min-width: $tablaContacto-flex-column-width;
+      }
   }
 }
 
@@ -396,13 +391,13 @@ table, .tabla, .table {
   grid-area: registro;
   margin-left: auto;
   margin-right: auto;
-  width: 95%;
+  width: $contacto-register-width;
 }
 
 fieldset {
-  border: 1px solid gray;
-  padding: 10px;
-  margin: 10px 0px;
+  border: $contacto-fieldset-border-width solid $contacto-fieldset-border-color;
+  padding: $contacto-fieldset-padding;
+  margin: $contacto-fieldset-margin;
 }
 
 form {
@@ -413,64 +408,69 @@ form {
 
 input {
   display: inline-block;
-  padding: 10px;
-  margin: 5px;
-  width: 20%;
+  padding: $contacto-input-padding;
+  margin: $contacto-input-margin;
+  width: $contacto-input-width;
 }
 
 .form-control {
-  margin: 0px 5px;
+  margin: $contacto-formControl-margin;
 }
 
 #initFields .form-control, .form-select{
-  margin: 5px;
-  min-width: 150px;
-  max-width: 50%;
+  margin: $contacto-initFields-form-margin;
+  min-width: $contacto-initFields-form-min-width;
+  max-width: $contacto-initFields-form-max-width;
 }
 
 #initFields__EdadPais {
-  /* max-width: 50%; */
   display: flex;
-  width: 50%;
-}
+  width: $contacto-initFields-EdadPais-width;
 
-#initFields__EdadPais input {
-  min-width: 20%;
+  & input {
+    min-width: $contacto-initFields-EdadPais-input-width;
+  }
 }
 
 label {
-  padding: 0px 5px;
-  margin: 5px;
+  padding: $contacto-label-padding;
+  margin: $contacto-label-margin;
 }
 
 .credentials, .bulletin {
-  padding: 10px;
-  width: 50%;
-  min-width: 300px;
+  padding: $contacto-credentials-bulletin-padding;
+  width: $contacto-credentials-bulletin-width;
+  min-width: $contacto-credentials-bulletin-min-width;
 }
 
 #server {
   display: flex;
-  width: 50%;
+  width: $contacto-server-width;
+
+  & input {
+    margin-left: $contacto-server-input-margin-left;
+    min-width: $contacto-server-input-min-width;
+  }
 }
 
-#credenciales span{
-  width: 30%;
-  max-width: 40px;
+#credenciales {
+  & span {
+    width: $contacto-credenciales-span-width;
+    max-width: $contacto-credenciales-span-max-width;
+  }  
 }
 
-#server input {
-  margin-left: 0px;
-  min-width: 70%;
+.bulletin {
+  & .input-group {
+    & div {
+      width: $contacto-bulletin-group-div-width;
+    }
+  }
 }
 
-.bulletin .input-group div {
-  width: 100%;
- }
-
-@media screen and (max-width: 340px) {
+@media screen and (max-width: $contacto-flex-max-width) {
   .credentials, .bulletin {
-    min-width: 90%;
+    min-width: $contacto-credentials-bulletin-flex-min-width;
   }
   .input-group {
     display: flex;
@@ -480,65 +480,73 @@ label {
     height: auto;
   }
 
-  #credenciales input {
-    margin: 2px 0px;
-    width: 100%;
+  #credenciales {
+    & span {
+      margin: $contacto-credenciales-span-flex-margin;
+    }
+    & input {
+      margin: $contacto-credenciales-input-flex-margin;
+      width: $contacto-credenciales-input-flex-width;
+    }
   }
 
   #server {
     display:flex;
-    width: 100%;
+    width: $contacto-server-flex-width;
 
-  }
-  #credenciales span{
-    margin: 2px 0px;
   }
 }
 
 #countries {
   display: inline-block;
-  padding: 10px;
-  margin: 5px;
-  min-width: 150px;
+  padding: $contacto-countries-padding;
+  margin: $contacto-countries-margin;
+  min-width: $contacto-countries-min-width;
 }
 
 input[type="radio"]:checked + label{
-  font-weight: bold;
+  font-weight: $contacto-input-checked-label;
 }
 
 #botonLimpiar {
-  min-width: 100px;
+  min-width: $contacto-buttons-min-width;
 }
 
 #botonEnviar, #botonCargando {
-  min-width: 100px;
-  background-color: rgb(255, 187, 60);
-  border-color: rgb(255, 187, 60);
-;
+  min-width: $contacto-buttons-min-width;
+  background-color: $contacto-buttons-color;
+  border-color: $contacto-buttons-color;
 }
 
 @keyframes toSpin {
-  0% { transform: rotate(0deg)}
-  10% { transform: rotate(36deg)}
-  20% { transform: rotate(72deg)}
-  30% { transform: rotate(108deg)}
-  40% { transform: rotate(144deg)}
-  50% { transform: rotate(180deg)}
-  60% { transform: rotate(216deg)}
-  70% { transform: rotate(252deg)}
-  80% { transform: rotate(288deg)}
-  90% { transform: rotate(324deg)}
-  100% { transform: rotate(360deg)}
+  @for $i from 0 through 10 {
+    #{$i*10%} { transform: rotate(#{$i*36deg})}
+  }
 }
 
+// Este for reemplaza a :
+// @keyframes toSpin {
+//   0% { transform: rotate(0deg)}
+//   10% { transform: rotate(36deg)}
+//   20% { transform: rotate(72deg)}
+//   30% { transform: rotate(108deg)}
+//   40% { transform: rotate(144deg)}
+//   50% { transform: rotate(180deg)}
+//   60% { transform: rotate(216deg)}
+//   70% { transform: rotate(252deg)}
+//   80% { transform: rotate(288deg)}
+//   90% { transform: rotate(324deg)}
+//   100% { transform: rotate(360deg)}
+//}
+
 #sunSpinner {
-  animation-name: toSpin;
+  animation-name: $contacto-sun-spinner-animation;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
-  animation-duration: 2s;
-  animation-delay: 0.5s;
+  animation-duration: $contacto-sun-spinner-duration;
+  animation-delay: $contacto-sun-spinner-delay;
   /* cursor: auto; */
-  width: 64px;
-  height: 64px;
-  margin: 0px 10px;
+  width: $contacto-sun-spinner-width;
+  height: $contacto-sun-spinner-height;
+  margin: $contacto-sun-spinner-margin
 }
