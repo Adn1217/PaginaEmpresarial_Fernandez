@@ -30,7 +30,7 @@ $info-padding: 10px;
 $info-width: 90%;
 
 $info__resume-background-size: 80%;
-$info__resume-padding: 5px;
+$info__resume-padding: 15px;
 $info__resume-width: 40%;
 $info__resume-min-width: 350px;
 
@@ -46,3 +46,112 @@ $iframe-width: 100%;
 $span-top-padding: 3%;
 
 $footer-padding: 3%;
+
+$additionalExp-list-style: none;
+
+$cuerpo-width: 95%;
+
+$table-border: 2px;
+$table-column-padding: 10px;
+$table-row-width: 100%;
+
+$table-flex-width: 428px;
+$table-img-min-width: 100%;
+$table-img-min-height: $table-img-min-width;
+
+$table-flex-row-width: 100%;
+
+$additionalExp-list-style: none;
+$additionExp-margin: 2%;
+$additionalExp-width: 95%;
+
+$members-flex-max-width1: 800px;
+$members-flex-max-width2: 660px;
+$members-flex-max-width3: 550px;
+$membersImgs-flex-min-width: 650px;
+$membersImgs-flex-min-width2: 512px;
+$membersImgs-flex-min-width3: 256px;
+$membersImgs-flex-min-height: $membersImgs-flex-min-width;
+$membersImgs-flex-min-height2: $membersImgs-flex-min-width2;
+$membersImgs-flex-min-height3: $membersImgs-flex-min-width3;
+$membersImgs-padding: 25px;
+
+$projects-imgs-width: 512px;
+$projects-imgs-height: $projects-imgs-width;
+$projects-imgs-transition-time: 0.5s;
+$projects-width-translate: 100px;
+$projects-height-translate: $projects-width-translate;
+$projects-scale: 1.3;
+
+$tablaContacto-border: 2px;
+$tablaContacto-spacing: 2px;
+$tablaContacto-margin-topBottom: 10px;
+$tablaContacto-width: 95%;
+$tablaContacto-column-max-width: 150px;
+$tablaContacto-columnHeader-min-width: 80px;
+
+$tablaContacto-flex-max-width: 450px;
+$tablaContacto-flex-row-width: 100%;
+$tablaContacto-flex-column-width: 240px;
+
+$contacto-register-width: 95%;
+$contacto-fieldset-border-width: 1px;
+$contacto-fieldset-border-color: grey;
+$contacto-fieldset-padding: 10px;
+$contacto-fieldset-margin: 10px 0px;
+
+$contacto-input-padding: 10px;
+$contacto-input-margin: 5px;
+$contacto-input-width: 20%;
+
+$contacto-formControl-margin: 0px 5px;
+
+$contacto-initFields-form-margin: 5px;
+$contacto-initFields-form-min-width: 150px;
+$contacto-initFields-form-max-width: 50%;
+$contacto-initFields-EdadPais-width: 50%;
+$contacto-initFields-EdadPais-input-width: 20%;
+
+$contacto-label-padding: 0px 5px;
+$contacto-label-margin: 5px;
+
+$contacto-credentials-bulletin-padding: 10px;
+$contacto-credentials-bulletin-width: 50%;
+$contacto-credentials-bulletin-min-width: 300px;
+
+$contacto-flex-max-width: 340px;
+$contacto-credentials-bulletin-flex-min-width: 90%;
+
+$contacto-server-width: 50%;
+$contacto-server-input-margin-left: 0px;
+$contacto-server-input-min-width: 70%;
+
+$contacto-credenciales-span-width: 30%;
+$contacto-credenciales-span-max-width: 40px;
+
+$contacto-bulletin-group-div-width: 100%;
+$contacto-group-flex-width: 95%;
+
+$contacto-credenciales-input-flex-margin: 2px 0px;
+$contacto-credenciales-input-flex-width: 100%;
+$contacto-credenciales-span-flex-margin: 2px 0px;
+
+
+$contacto-server-flex-width: 100%;
+
+$contacto-countries-padding: 10px;
+$contacto-countries-margin: 5px;
+$contacto-countries-min-width: 150px;
+
+$contacto-input-checked-label: bold;
+
+$contacto-buttons-min-width: 100px;
+
+$contacto-sun-spinner-animation: toSpin;
+$contacto-sun-spinner-duration: 2s; 
+$contacto-sun-spinner-delay: 0.5s;
+$contacto-sun-spinner-width: 64px;
+$contacto-sun-spinner-height: $contacto-sun-spinner-width;
+$contacto-sun-spinner-margin: 0px 10px;
+
+

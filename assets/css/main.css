@@ -25,12 +25,15 @@
   #header__logo {
     display: none; } }
 
-.gridContainer {
+.gridContainer, .IndexgridContainer {
   background-image: linear-gradient(to top, #ffff53, #ffbb3c);
   display: grid;
-  grid-template-areas: "header header header header" "Imagenes Imagenes Imagenes Imagenes" "info__resume info__resume info__video info__video" "info__resume info__resume info__video info__video" "footer footer footer footer";
+  grid-template-areas: "header header header header" "Imagenes Imagenes Imagenes Imagenes" "Cuerpo Cuerpo Cuerpo Cuerpo" "Cuerpo Cuerpo Cuerpo Cuerpo" "footer footer footer footer";
   grid-template-rows: auto auto auto auto auto;
   grid-template-columns: auto auto auto auto auto; }
+
+.IndexgridContainer {
+  grid-template-areas: "header header header header" "Imagenes Imagenes Imagenes Imagenes" "info__resume info__resume info__video info__video" "info__resume info__resume info__video info__video" "footer footer footer footer"; }
 
 .gridContainerContact {
   /* background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%); */
@@ -125,9 +128,10 @@ article {
   background-repeat: no-repeat;
   background-size: 80%;
   font-family: "Roboto Thin", cursive;
-  padding: 5px;
+  padding: 15px;
   width: 40%;
   min-width: 350px;
+  text-align: justify;
   /* max-width: 80%; */ }
 
 .info__video {
@@ -170,9 +174,12 @@ footer {
 
 table img {
   transition: transform 0.5s; }
+  table img:hover {
+    transform: scale(1.3); }
 
-table img:hover {
-  transform: scale(1.3); }
+.Experiencia {
+  grid-area: Cuerpo;
+  width: 95%; }
 
 .Referencia {
   font-style: italic; }
@@ -201,11 +208,13 @@ tr {
     width: 100%;
     height: auto; } }
 
-.additionalExp {
+#additionalExp {
   /* background-color: gainsboro; */
   list-style-type: none;
   margin: 2%;
   width: 95%; }
+  #additionalExp h1 {
+    padding-top: 10px; }
 
 @media screen and (max-width: 800px) {
   .teamMembers img {
@@ -222,25 +231,23 @@ tr {
 @media screen and (max-width: 660px) {
   .teamMembers img {
     min-width: 512px;
-    min-height: 512px;
-    padding: 25px; } }
+    min-height: 512px; } }
 
 @media screen and (max-width: 550px) {
   .teamMembers img {
     min-width: 256px;
-    min-height: 256px;
-    padding: 25px; } }
+    min-height: 256px; } }
 
 .projects img {
   width: 512px;
   height: 512px;
   transition: transform 0.5s; }
+  .projects img:hover {
+    transform: translate(100px, 100px) scale(1.3); }
 
-.projects img:hover {
-  transform: translate(100px, 100px) scale(1.3); }
-
-table, .tabla, .table {
+table, .tabla {
   /* margin: 2%; */
+  grid-area: tabla;
   margin-left: auto;
   margin-right: auto;
   width: 95%; }
@@ -253,20 +260,16 @@ table, .tabla, .table {
   margin: 10px auto;
   width: 95%;
   /* min-width: 80%; */ }
-
-.tablaContacto tr {
-  display: table;
-  flex-wrap: no-wrap; }
-
-.tablaContacto td {
-  /* min-width: 100px; */
-  max-width: 150px;
-  /* width: 120px;  */
-  border: none; }
-
-.tablaContacto th {
-  min-width: 80px;
-  border: none; }
+  .tablaContacto tr {
+    display: table;
+    flex-wrap: no-wrap;
+    table-layout: fixed; }
+  .tablaContacto td {
+    max-width: 150px;
+    border: none; }
+  .tablaContacto th {
+    min-width: 80px;
+    border: none; }
 
 @media screen and (max-width: 450px) {
   .tablaContacto th {
@@ -287,7 +290,7 @@ table, .tabla, .table {
   width: 95%; }
 
 fieldset {
-  border: 1px solid gray;
+  border: 1px solid grey;
   padding: 10px;
   margin: 10px 0px; }
 
@@ -311,12 +314,10 @@ input {
   max-width: 50%; }
 
 #initFields__EdadPais {
-  /* max-width: 50%; */
   display: flex;
   width: 50%; }
-
-#initFields__EdadPais input {
-  min-width: 20%; }
+  #initFields__EdadPais input {
+    min-width: 20%; }
 
 label {
   padding: 0px 5px;
@@ -330,14 +331,13 @@ label {
 #server {
   display: flex;
   width: 50%; }
+  #server input {
+    margin-left: 0px;
+    min-width: 70%; }
 
 #credenciales span {
   width: 30%;
   max-width: 40px; }
-
-#server input {
-  margin-left: 0px;
-  min-width: 70%; }
 
 .bulletin .input-group div {
   width: 100%; }
@@ -351,14 +351,14 @@ label {
     flex-wrap: wrap;
     width: 95%;
     height: auto; }
+  #credenciales span {
+    margin: 2px 0px; }
   #credenciales input {
     margin: 2px 0px;
     width: 100%; }
   #server {
     display: flex;
-    width: 100%; }
-  #credenciales span {
-    margin: 2px 0px; } }
+    width: 100%; } }
 
 #countries {
   display: inline-block;
