@@ -322,19 +322,16 @@ tr {
   }
 }
 
-// ################################################
-// AQUI INICIAN LOS ESTILOS DE LAS OTRAS PÁGINAS 
-// (SIN SASS HASTA EL MOMENTO)
-// ################################################
 // ################ PROYECTOS #####################
-.projects img {
-  width: 512px;
-  height: 512px;
-  transition: transform 0.5s;
-}
-
-.projects img:hover {
-  transform: translate(100px, 100px) scale(1.3);
+.projects {
+  & img {
+    width: $projects-imgs-width;
+    height: $projects-imgs-height;
+    transition: transform $projects-imgs-transition-time;
+    &:hover{
+      transform: translate($projects-width-translate, $projects-width-translate) scale($projects-scale);
+    }
+  }
 }
 
 table, .tabla, .table {
@@ -344,9 +341,14 @@ table, .tabla, .table {
   width: 95%;
 }
 
+// ################################################
+// AQUI INICIAN LOS ESTILOS DE LAS OTRAS PÁGINAS 
+// (SIN SASS HASTA EL MOMENTO)
+// ################################################
+
 .tablaContacto {
-  border:2px solid;
-  border-spacing: 2px;
+  border: $tablaContacto-border solid;
+  border-spacing: $tablaContacto-spacing;
   border-collapse: separate;
   grid-area: tabla;
   margin: 10px auto;

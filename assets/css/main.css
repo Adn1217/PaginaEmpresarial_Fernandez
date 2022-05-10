@@ -242,9 +242,8 @@ tr {
   width: 512px;
   height: 512px;
   transition: transform 0.5s; }
-
-.projects img:hover {
-  transform: translate(100px, 100px) scale(1.3); }
+  .projects img:hover {
+    transform: translate(100px, 100px) scale(1.3); }
 
 table, .tabla, .table {
   /* margin: 2%; */
