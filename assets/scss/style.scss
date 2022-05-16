@@ -289,36 +289,32 @@ tr {
 }
 
 // ############## EQUIPO ##########################
+
+.Equipo {
+  grid-area: Imagenes;
+  margin: $members-margin;
+}
+
+.row {
+  margin: $members-row-margin;
+  justify-content: space-around;
+}
+
+.card {
+  min-height: $members-card-min-heigth;
+  min-width: $members-card-min-width;
+}
+
+
 @media screen and (max-width: $members-flex-max-width1) {
 
-  .teamMembers {
+  .card {
+    margin: $membersCards-flex-margin;
     & img {
       min-width: $membersImgs-flex-min-width;
       min-height: $membersImgs-flex-min-height; 
       padding: $membersImgs-padding;
     }
-  }
-
-  tr {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    width: $table-flex-row-width;
-    height: auto;
-  }
-}
-
-@media screen and (max-width: $members-flex-max-width2){
-  .teamMembers img {
-    min-width: $membersImgs-flex-min-height2;
-    min-height:$membersImgs-flex-min-height2; 
-  }
-}
-
-@media screen and (max-width: $members-flex-max-width3){
-  .teamMembers img {
-    min-width: $membersImgs-flex-min-width3;
-    min-height:$membersImgs-flex-min-height3; 
   }
 }
 
