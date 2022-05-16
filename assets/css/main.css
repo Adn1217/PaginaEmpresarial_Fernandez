@@ -216,27 +216,25 @@ tr {
   #additionalExp h1 {
     padding-top: 10px; }
 
-@media screen and (max-width: 800px) {
-  .teamMembers img {
-    min-width: 650px;
-    min-height: 650px;
-    padding: 25px; }
-  tr {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    width: 100%;
-    height: auto; } }
+.Equipo {
+  grid-area: Imagenes;
+  margin: 0px 10px; }
 
-@media screen and (max-width: 660px) {
-  .teamMembers img {
-    min-width: 512px;
-    min-height: 512px; } }
+.row {
+  margin: 10px 0px;
+  justify-content: space-around; }
 
-@media screen and (max-width: 550px) {
-  .teamMembers img {
-    min-width: 256px;
-    min-height: 256px; } }
+.card {
+  min-height: 440px;
+  min-width: 220px; }
+
+@media screen and (max-width: 768px) {
+  .card {
+    margin: 10px; }
+    .card img {
+      min-width: 550px;
+      min-height: 550px;
+      padding: 25px; } }
 
 .projects img {
   width: 512px;
